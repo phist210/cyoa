@@ -1,23 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+  </head>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <!--<link rel="stylesheet" href="css/styles.css">  CSS link -->
-
-</head>
+  <body>
     <div class='main-container'>
-        <div class='story-main'>Each story board and its image</div>
+        <div class='story-main'>
+          {% for storyline in storyboard %}
+            <!-- <img src='{{storyline.dj_setup}}'/> -->
+            <!-- <img src='{{storyline.background_image}}'/> -->
+            {{storyline.id}}
+          {% endfor %}
+        </div>
         <div class="button-bar">
-            <a href="#" class="button one">One</a>
-            <a href="#" class="button two">Two</a>
-            <a href="#" class="button three">Three</a>
+            <a href="#" class="button prev">Previous</a>
+            <a href="#" class="button prac">Practice</a>
+            <a href="#" class="button next">Next</a>
         </div>
     </div>
-
-<body>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <!--<script src="js/scripts.js"></script>  add JS link -->
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+  </body>
 </html>
