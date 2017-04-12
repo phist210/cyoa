@@ -4,10 +4,20 @@
     <meta charset="utf-8"/>
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
-    <title>ROAD TO IMAGINE FESTIVAL</title>
+    <link rel="shortcut icon" href="{% static 'images/pad.png' %}"/>
+    <title># Road to Imagine Festival #</title>
   </head>
 
   <body>
+    <div class='setup'>
+      <img class='equipment' id='turntablemixer' src='{% static "images/turntablemixer.png" %}'/>
+      <img class='equipment' id='laptop' src='{% static "images/laptop.png" %}'/>
+      <img class='equipment' id='turntablesfull' src='{% static "images/turntablesfull.png" %}'/>
+      <img class='equipment' id='djcontroller' src='{% static "images/djcontroller.png" %}'/>
+      <img class='equipment' id='pad' src='{% static "images/pad.png" %}'/>
+      <img class='equipment' id='cdjdjsetup' src='{% static "images/cdjdjsetup.png" %}'/>
+    </div>
+
     <div class='main-container'>
         <div class='story-main'>
           <div class='text-block'>
@@ -15,11 +25,12 @@
           </div>
         </div>
         <div class="button-bar">
-            <a href="#" class='button restart'>Restart</a>
-            |--- <a href="#" class="button prac">Practice</a> ---|
-            <a href="#" class="button next">Next</a>
+            <span class='spanrestart'><a href="#" class='button restart'>Restart</a></span>
+            <span class='practice'>|--- <a href="#" class="button prac">Practice</a> ---|</span>
+            <span class='spannext'><a href="#" class="button next">Onwards</a></span>
         </div>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="{% static 'js/base.js' %}"></script>
   </body>

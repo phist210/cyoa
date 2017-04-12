@@ -21,7 +21,7 @@ a{
   margin-top: 2em;
   /*background-color: #fff;*/
   border: .1em solid black;
-  width: 70%;
+  width: 50%;
   height: 500px;
   background-image: url('');
   background-repeat: no-repeat;
@@ -46,12 +46,32 @@ a{
   margin-top: .5em;
 }
 
-img{
-  width: 40%;
-  height:auto;
+.equipment{
+  width: 50%;
+  height: 50%;
+  display: none;
 }
 
 .button{
   padding: .5em;
+}
 
+.practice{
+  display: none;
+}
+
+.spanrestart{
+  display: show;
+}
+
+.spannext{
+  display: show;
+}
+
+.setup{
+  padding: 1em;
+  display: flex;
+  position: absolute;
+  flex-flow: column;
+  justify-content: flex-start;
 }
