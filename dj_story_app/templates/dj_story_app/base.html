@@ -4,20 +4,19 @@
     <meta charset="utf-8"/>
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+    <title>ROAD TO IMAGINE FESTIVAL</title>
   </head>
 
   <body>
     <div class='main-container'>
         <div class='story-main'>
-          {% for storyline in storyboard %}
-            <!-- <img src='{{storyline.dj_setup}}'/> -->
-            <!-- <img src='{{storyline.background_image}}'/> -->
-            {{storyline.id}}
-          {% endfor %}
+          <div class='text-block'>
+            <p>WELCOME</p>
+          </div>
         </div>
         <div class="button-bar">
-            <a href="#" class="button prev">Previous</a>
-            <a href="#" class="button prac">Practice</a>
+            <a href="#" class='button restart'>Restart</a>
+            |--- <a href="#" class="button prac">Practice</a> ---|
             <a href="#" class="button next">Next</a>
         </div>
     </div>
