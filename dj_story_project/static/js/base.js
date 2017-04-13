@@ -62,8 +62,8 @@ $('.next').on('click', function() {
         $('.story-main').css('background-image', 'url('+ imgLink +')');
         $('.text-block').html('' + result[8].storyline + '');
         $('.practice').show();
-
-        console.log(i);
+        $('.main-container').append('<div id=dialog-confirm title=' + 'Make the connection?' + '><p><span class=ui-icon ui-icon-alert style=float:left; margin:12px 12px 20px 0;></span>' + 'YEAH' + '</p></div>')
+        console.log(i + ': frat party');
       }
       // Lame club
       if (level >= 5 && i === 3) {
@@ -122,14 +122,29 @@ $('.next').on('click', function() {
   })
 });
 
-
 $('.prac').on('click', function() {
   ++level
   console.log("Great job, you have achieved level " + level + "!");
 
 });
 
-
 $('.restart').on('click', function() {
   window.location.href='/index'
 });
+
+$( function() {
+    $( "#dialog-confirm" ).dialog({
+      resizable: false,
+      height: "auto",
+      width: 400,
+      modal: true,
+      buttons: {
+        "Delete all items": function() {
+          $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  } );

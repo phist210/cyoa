@@ -75,3 +75,7 @@ a{
   flex-flow: column;
   justify-content: flex-start;
 }
+
+div#dialog-confirm{
+  display: none;
+}
